@@ -1,7 +1,6 @@
-# Repositorio-Cavia-Porcellus---Proyecto-de-Titulacion-Pacheco-C
+# Repositorio----Proyecto-de-Titulacion-Pacheco-C
 Repositorio donde se encuentra el codigo y las evidencias del desarrollo de proyecto de titulacion con el Asistente Robotico Cavia Porcellus
 
-# Módulo de Control de Movimiento Basado en Visión por Computador y Aprendizaje Profundo para el Soporte en la Enseñanza de las Culturas Inca y Cañari en Niños a Través del Asistente Robótico Cavia Porcellus de la Cátedra UNESCO de la UPS
 
 ## Descripción
 
