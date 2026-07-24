@@ -7,7 +7,7 @@ MAX_MISSING_FRAMES = 30
 DISTANCE_STOP = 190
 
 
-class MovementController:
+class Controller:
     def __init__(self):
         self.state = "WAITING"
         self.missing_frames = 0
