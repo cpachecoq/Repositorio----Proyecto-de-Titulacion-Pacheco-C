@@ -28,8 +28,8 @@ SAFE_BOTTOM = 465
 COMMAND_STABLE_FRAMES = 3
 MAX_MISSING_FRAMES = 5
 
-from movement_controller2 import MovementController
-from bluethoot_controller import BluetoothController
+from Controller import Controller
+from bluetooth_conmmand import BluetoothCommandr
 
 class IntegratedApp(QWidget):
     def __init__(self, category="Maiz"):
