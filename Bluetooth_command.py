@@ -3,7 +3,7 @@ import time
 
 MIN_SEND_INTERVAL = 0.15
 
-class BluetoothController:
+class BluetoothCommandr:
     def __init__(self, port="COM4", baudrate=9600):
         self.port = port
         self.baudrate = baudrate
