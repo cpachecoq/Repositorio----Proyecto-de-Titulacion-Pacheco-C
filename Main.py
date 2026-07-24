@@ -10,7 +10,7 @@ from PyQt6.QtGui import QFont, QPixmap
 from PyQt6.QtCore import QSize
 
 
-from trayectoria import IntegratedApp  
+from Trayectoria import IntegratedApp  
 
 
 ICON_BY_CATEGORY = {
