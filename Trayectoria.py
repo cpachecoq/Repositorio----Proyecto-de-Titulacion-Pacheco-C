@@ -60,8 +60,12 @@ class IntegratedApp(QWidget):
 
         self.movement_controller = MovementController()
         
-        self.bluetooth = BluetoothController(port="COM4", baudrate=9600)
-        self.bluetooth.connect()
+        self.bluetooth = BluetoothController(
+            port="COM4", 
+            baudrate=9600
+        )
+        if self.bluetooth.connect():
+            self.bluetooth.send_speed(70)
 
         self.video_label.setScaledContents(False)
 
