@@ -47,7 +47,7 @@ class IntegratedApp(QWidget):
         self.setLayout(layout)
 
         self.cap = cv2.VideoCapture(1)
-        self.model = YOLO("best20.pt")
+        self.model = YOLO("best.pt")
 
         self.timer = QTimer()
         self.timer.timeout.connect(self.update_frame)
