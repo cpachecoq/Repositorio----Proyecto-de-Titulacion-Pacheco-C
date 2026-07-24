@@ -1,9 +1,9 @@
 
-# Notebooks de Entrenamiento
+# Cuadernos de Entrenamiento
 
 ## Descripción
 
-Esta carpeta reúne los cuadernos de Jupyter utilizados durante el desarrollo y evaluación de los modelos de inteligencia artificial implementados en este proyecto. Los notebooks documentan el proceso de entrenamiento, validación y análisis de resultados tanto del modelo de detección de objetos basado en YOLO como del modelo multimodal LLaVA, permitiendo reproducir las principales etapas de experimentación realizadas durante la investigación.
+Esta carpeta reúne los cuadernos de Colab utilizados durante el desarrollo y evaluación de los modelos de inteligencia artificial implementados en este proyecto. Los notebooks documentan el proceso de entrenamiento, validación y análisis de resultados tanto del modelo de detección de objetos basado en YOLO como del modelo multimodal LLaVA, permitiendo reproducir las principales etapas de experimentación realizadas durante la investigación.
 
 ## Contenido
 
