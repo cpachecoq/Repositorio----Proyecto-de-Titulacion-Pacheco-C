@@ -10,7 +10,7 @@ from PyQt6.QtGui import QFont, QPixmap
 from PyQt6.QtCore import QSize
 
 
-from trayectoria6 import IntegratedApp  # tu clase actual
+from trayectoria import IntegratedApp  
 
 
 ICON_BY_CATEGORY = {
@@ -28,20 +28,18 @@ FULLSCREEN_ICON = os.path.join(BASE_DIR, "assets", "icons", "Pantalla.png")
 CUY_ICON = os.path.join(BASE_DIR, "assets", "icons", "Cavia.png")
 
 LIGHT_QSS = """
-/* === Fondo exterior celeste infantil === */
+
 QWidget {
     background-color: #B5E5FF;  /* celeste suave */
     color: #123;
 }
 
-/* === Tarjeta interior (blanca) === */
 QFrame#Card {
     background: #FFFFFF;
     border: 2px solid rgba(0,0,0,0.06);
     border-radius: 20px;
 }
 
-/* === Textos === */
 QLabel#Title {
     color: #1B3A57;
     font-size: 22px;
@@ -53,7 +51,6 @@ QLabel#Subtitle {
     font-weight: 600;
 }
 
-/* === Botones generales === */
 QPushButton.Category {
     background: #FDFDFE;
     border: 3px solid #D8EAFE;
@@ -72,7 +69,6 @@ QPushButton.Category:pressed {
     border-color: #7FB8FF;
 }
 
-/* === Botón de ayuda (naranja) === */
 QPushButton#HelpBtn {
     background: #FFD580;
     border: 3px solid #FFB347;
@@ -91,9 +87,8 @@ QPushButton#HelpBtn:pressed {
     border-color: #FF9100;
 }
 
-/* === Botón de pantalla completa grande (abajo) === */
 QPushButton#FullBtn {
-    background: #A8E6CF;            /* verde menta suave */
+    background: #A8E6CF;           
     border: 3px solid #81D4AF;
     border-radius: 22px;
     padding: 20px 30px;
@@ -140,15 +135,13 @@ class MainWindow(QWidget):
         header.addWidget(title)
         header.addWidget(subtitle)
         root.addLayout(header)
-
-        # ===== Tarjeta blanca (contenedor de los botones) =====
+ 
         card = QFrame()
         card.setObjectName("Card")
         card_layout = QVBoxLayout(card)
         card_layout.setContentsMargins(16, 16, 16, 16)
         card_layout.setSpacing(12)
 
-        # ===== Grid de 8 botones (4 filas × 2 columnas) =====
         grid = QGridLayout()
         grid.setHorizontalSpacing(12)
         grid.setVerticalSpacing(12)
@@ -156,7 +149,6 @@ class MainWindow(QWidget):
         categories = ["Chakana", "Maiz", "Condor", "Llama", "Cuy", "Tinaja", "Zampoña"]
         font_button = QFont("Arial", 16, QFont.Weight.Bold)
 
-        # Crear los 7 botones de figuras
         for idx, name in enumerate(categories):
             btn = QPushButton(f"  {name}")  # solo el texto
             icon_path = ICON_BY_CATEGORY.get(name)
@@ -173,8 +165,8 @@ class MainWindow(QWidget):
             r, c = divmod(idx, 2)
             grid.addWidget(btn, r, c)
 
-        # Botón de ayuda (octavo)
-        help_btn = QPushButton("❓ Ayuda")
+        
+        help_btn = QPushButton("Ayuda")
         help_btn.setFont(font_button)
         help_btn.setCursor(Qt.CursorShape.PointingHandCursor)
         help_btn.setObjectName("HelpBtn")
@@ -186,7 +178,6 @@ class MainWindow(QWidget):
         card_layout.addLayout(grid)
         root.addWidget(card)
 
-        # ===== Botón de pantalla completa (grande, abajo) =====
         bottom_layout = QHBoxLayout()
         bottom_layout.setAlignment(Qt.AlignmentFlag.AlignCenter)
         full_btn = QPushButton(" Pantalla completa")
@@ -200,13 +191,13 @@ class MainWindow(QWidget):
 
         root.addStretch()
 
-    # ======= Funciones =======
+    # Funciones 
     def show_help(self):
         msg = QMessageBox(self)
         msg.setWindowTitle("Cómo jugar")
         msg.setIcon(QMessageBox.Icon.Information)
         msg.setText(
-            "👋 ¡Hola! Elige una tarjeta para explorar.\n\n"
+            " ¡Hola! Elige una tarjeta para explorar.\n\n"
             "• La cámara buscará la figura seleccionada.\n"
             "• Mantén la figura frente a la cámara y ¡observa qué pasa!\n"
             "• Si quieres cambiar de figura, cierra la ventana y vuelve aquí.\n\n"
