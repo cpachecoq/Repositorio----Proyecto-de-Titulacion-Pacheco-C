@@ -2,12 +2,6 @@
 
 
 
-## Descripción
-
-Este repositorio contiene el código fuente y la documentación correspondiente al trabajo de titulación desarrollado en la Universidad Politécnica Salesiana. El proyecto implementa un módulo de control de movimiento basado en visión por computador y aprendizaje profundo que permite a un asistente robótico desplazarse de forma autónoma hacia pictogramas representativos de las culturas Inca y Cañari, contribuyendo al desarrollo de actividades educativas dirigidas a niños.
-
-Además del código fuente, el repositorio incluye las evidencias experimentales, documentación técnica, material utilizado durante el proceso de evaluación y el acceso al conjunto de datos empleado para el entrenamiento de los modelos de inteligencia artificial.
-
 ## Estructura del repositorio
 
 ### Código fuente
