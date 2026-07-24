@@ -8,7 +8,7 @@
 
 El directorio principal contiene el código fuente de la aplicación desarrollado en Python, incluyendo los módulos responsables de la interfaz gráfica, detección de pictogramas, navegación del robot y comunicación con el sistema embebido.
 
-### 01_notebooks_entrenamiento
+### 01_entrenamiento
 
 Contiene los cuadernos de Jupyter utilizados durante el entrenamiento y evaluación de los modelos YOLO y LLaVA, así como las métricas obtenidas durante el proceso experimental.
 
